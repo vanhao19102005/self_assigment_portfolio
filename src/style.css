@@ -2,3 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
+.section-title {
+  @apply text-2xl font-semibold mb-6 text-center;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card-hover-small {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover-small:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fadeInDown {
+  animation: fadeInDown 0.6s ease-out forwards;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.stagger-container > * {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+.stagger-container > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.stagger-container > *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.stagger-container > *:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.stagger-container > *:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.stagger-container > *:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.stagger-container > *:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.stagger-container > *:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.stagger-container > *:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+.transition {
+  transition: color 0.3s ease;
+}
